@@ -154,20 +154,14 @@ The application uses the following API endpoints:
 ## 🎨 Screenshots
 
 ### Home Page
-<img width="1902" height="986" alt="contacts-page" src="https://github.com/user-attachments/assets/3979737b-5de0-44e3-8280-1783b2e0a215" />
-<img width="1900" height="988" alt="login-page" src="https://github.com/user-attachments/assets/8fa19b7c-fd18-4d7d-9330-22e5b91a74f4" />
 <img width="1900" height="986" alt="home-page" src="https://github.com/user-attachments/assets/7066f028-be39-4bcd-8aed-621c2644b0d1" />
 
 
 ### Login Page
-<img width="1900" height="986" alt="home-page" src="https://github.com/user-attachments/assets/953707bd-4920-4495-97fa-d2218dc6868d" />
-<img width="1902" height="986" alt="contacts-page" src="https://github.com/user-attachments/assets/5ea21186-7f18-4368-870d-cdb5be04d147" />
 <img width="1900" height="988" alt="login-page" src="https://github.com/user-attachments/assets/0580988c-8c8b-4b79-880f-aa7132c9fede" />
 
 
 ### Contacts Page
-(<img width="1900" height="988" alt="login-page" src="https://github.com/user-attachments/assets/c27bd57a-e333-4a7e-83d3-b8549dd81be7" />
-<img width="1900" height="986" alt="home-page" src="https://github.com/user-attachments/assets/3bcd863a-a631-4ba2-9614-7c1138d85b97" />
 <img width="1902" height="986" alt="contacts-page" src="https://github.com/user-attachments/assets/d985d8a7-6e51-47a0-ba7e-59214a6a4f57" />
 
 
