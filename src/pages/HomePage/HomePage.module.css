@@ -1,0 +1,292 @@
+/* ============================================
+   HOMEPAGE STYLES
+   ============================================ */
+
+/* Ana Container */
+.homePage {
+  min-height: calc(100vh - 64px); /* AppBar yüksekliği hariç */
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* ============================================
+   HERO SECTION - Ana Karşılama Bölümü
+   ============================================ */
+.heroSection {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Hero İkon */
+.heroIcon {
+  font-size: 120px !important;
+  color: white;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/* Ana Başlık */
+.title {
+  font-size: 56px !important;
+  font-weight: 800 !important;
+  color: white !important;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  letter-spacing: -1px;
+  line-height: 1.2 !important;
+}
+
+/* Alt Başlık */
+.subtitle {
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  max-width: 600px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   CTA BUTTONS - Call to Action Butonları
+   ============================================ */
+.ctaButtons {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* Primary Button (Get Started, Go to Contacts) */
+.primaryButton {
+  background: white !important;
+  color: #667eea !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  padding: 14px 36px !important;
+  border-radius: 12px !important;
+  font-size: 18px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.3s ease !important;
+}
+
+.primaryButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25) !important;
+  background: #f5f5f5 !important;
+}
+
+/* Secondary Button (Login) */
+.secondaryButton {
+  border: 2px solid white !important;
+  color: white !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  padding: 14px 36px !important;
+  border-radius: 12px !important;
+  font-size: 18px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease !important;
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ============================================
+   FEATURES SECTION - Özellikler Bölümü
+   ============================================ */
+.featuresSection {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.featuresTitle {
+  text-align: center;
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  color: white !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Grid */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Feature Card */
+.featureCard {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 16px !important;
+  padding: 16px !important;
+  text-align: center;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2) !important;
+}
+
+.featureIcon {
+  font-size: 64px !important;
+  color: #667eea !important;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 2px 8px rgba(102, 126, 234, 0.3));
+}
+
+.featureTitle {
+  font-weight: 700 !important;
+  color: #333 !important;
+  margin-bottom: 12px !important;
+}
+
+.featureDescription {
+  color: #666 !important;
+  line-height: 1.6 !important;
+}
+
+/* ============================================
+   FOOTER INFO
+   ============================================ */
+.footerInfo {
+  text-align: center;
+  padding: 24px 0;
+  animation: fadeIn 1.2s ease-out 0.6s backwards;
+}
+
+.footerText {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 16px !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobil Uyumluluk
+   ============================================ */
+
+/* Tablet (768px ve altı) */
+@media (max-width: 768px) {
+  .heroIcon {
+    font-size: 80px !important;
+  }
+
+  .title {
+    font-size: 40px !important;
+  }
+
+  .subtitle {
+    font-size: 20px !important;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    padding: 12px 28px !important;
+    font-size: 16px !important;
+  }
+
+  .featuresTitle {
+    font-size: 28px !important;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobil (480px ve altı) */
+@media (max-width: 480px) {
+  .homePage {
+    padding: 20px 0;
+  }
+
+  .container {
+    gap: 40px;
+  }
+
+  .heroIcon {
+    font-size: 64px !important;
+  }
+
+  .title {
+    font-size: 32px !important;
+  }
+
+  .subtitle {
+    font-size: 18px !important;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    padding: 12px 24px !important;
+    font-size: 15px !important;
+  }
+
+  .featuresTitle {
+    font-size: 24px !important;
+  }
+
+  .featureIcon {
+    font-size: 48px !important;
+  }
+}

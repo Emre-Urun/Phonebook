@@ -1,0 +1,45 @@
+:root {
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Renk Paleti */
+  --bg-color: #f3f4f6; /* Açık Gri Arka Plan */
+  --card-bg: #ffffff; /* Beyaz Kart */
+  --primary-color: #4f46e5; /* İndigo Mavisi (Ana Buton) */
+  --primary-hover: #4338ca;
+  --danger-color: #ef4444; /* Kırmızı (Silme Butonu) */
+  --danger-hover: #dc2626;
+  --text-main: #1f2937; /* Koyu Gri Yazı */
+  --text-secondary: #6b7280; /* Açık Gri Yazı */
+  --border-color: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center; /* Dikey/Yatay Ortala */
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}

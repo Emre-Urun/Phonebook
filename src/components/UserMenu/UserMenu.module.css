@@ -1,0 +1,178 @@
+/* ============================================
+   USERMENU STYLES
+   ============================================ */
+
+/* UserMenu Container */
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Avatar+İsim ile Logout butonu arası boşluk */
+}
+
+/* ============================================
+   USER INFO - Avatar ve İsim Bölümü
+   ============================================ */
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Avatar ile isim arası boşluk */
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: rgba(102, 126, 234, 0.1);
+  transition: all 0.3s ease;
+}
+
+.userInfo:hover {
+  background-color: rgba(102, 126, 234, 0.2);
+  transform: scale(1.02);
+}
+
+/* Avatar (Kullanıcı İkonu/İlk Harf) */
+.avatar {
+  width: 36px !important;
+  height: 36px !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* Kullanıcı Adı */
+.userName {
+  font-weight: 600 !important;
+  color: #333 !important;
+  font-size: 15px !important;
+  letter-spacing: 0.3px;
+  max-width: 150px; /* Çok uzun isimlerde taşmasın */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Uzun isimler ... ile kesilir */
+  white-space: nowrap;
+}
+
+/* ============================================
+   LOGOUT BUTTON
+   ============================================ */
+.logoutButton {
+  font-weight: 600 !important;
+  text-transform: none !important;
+  padding: 8px 20px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  font-size: 14px !important;
+  border: 2px solid #f44336 !important;
+  color: #f44336 !important;
+  letter-spacing: 0.5px;
+}
+
+.logoutButton:hover {
+  background-color: #f44336 !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.4) !important;
+}
+
+.logoutButton:active {
+  transform: translateY(0);
+}
+
+/* İkon Stilleri */
+.logoutButton svg {
+  font-size: 18px !important;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobil Uyumluluk
+   ============================================ */
+
+/* Tablet (768px ve altı) */
+@media (max-width: 768px) {
+  .userMenu {
+    gap: 12px;
+  }
+
+  .userInfo {
+    gap: 8px;
+    padding: 4px 10px;
+  }
+
+  .avatar {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+  }
+
+  .userName {
+    font-size: 14px !important;
+    max-width: 120px;
+  }
+
+  .logoutButton {
+    padding: 6px 16px !important;
+    font-size: 13px !important;
+  }
+}
+
+/* Mobil (480px ve altı) */
+@media (max-width: 480px) {
+  .userMenu {
+    gap: 8px;
+  }
+
+  .userInfo {
+    padding: 4px 8px;
+  }
+
+  .avatar {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 13px !important;
+  }
+
+  /* Çok dar ekranlarda kullanıcı adını gizle, sadece avatar kalsın */
+  .userName {
+    display: none;
+  }
+
+  .logoutButton {
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+    min-width: auto !important;
+  }
+
+  /* Çok dar ekranlarda buton yazısını gizle, sadece ikon kalsın */
+  .logoutButton span:not(.MuiButton-startIcon) {
+    display: none;
+  }
+
+  .logoutButton svg {
+    margin: 0 !important;
+    font-size: 20px !important;
+  }
+}
+
+/* ============================================
+   ANIMATION - Smooth Entrance
+   ============================================ */
+.userMenu {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY - Focus States
+   ============================================ */
+.logoutButton:focus {
+  outline: 2px solid #f44336;
+  outline-offset: 2px;
+}

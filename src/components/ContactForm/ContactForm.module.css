@@ -1,0 +1,124 @@
+/* ============================================
+   CONTACT FORM STYLES
+   ============================================ */
+
+/* Form Container */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ============================================
+   FIELD WRAPPER - Input ve İkon Container
+   ============================================ */
+.fieldWrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Field İkonu (Sol tarafta) */
+.fieldIcon {
+  color: #667eea !important;
+  font-size: 28px !important;
+  margin-top: 14px; /* Input ile hizalamak için */
+  flex-shrink: 0; /* İkon küçülmesin */
+}
+
+/* TextField (Material-UI) */
+.textField {
+  flex: 1;
+}
+
+/* TextField focus durumu */
+.textField .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #667eea !important;
+  border-width: 2px;
+}
+
+/* TextField label focus durumu */
+.textField .MuiInputLabel-root.Mui-focused {
+  color: #667eea !important;
+}
+
+/* ============================================
+   SUBMIT BUTTON
+   ============================================ */
+.submitButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  padding: 14px !important;
+  border-radius: 12px !important;
+  font-size: 16px !important;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4) !important;
+  transition: all 0.3s ease !important;
+  margin-top: 8px;
+}
+
+.submitButton:hover:not(:disabled) {
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6) !important;
+  transform: translateY(-2px);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ============================================
+   LOADING BOX - Yükleniyor Durumu
+   ============================================ */
+.loadingBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobil Uyumluluk
+   ============================================ */
+
+/* Mobil (480px ve altı) */
+@media (max-width: 480px) {
+  .form {
+    gap: 20px;
+  }
+
+  .fieldWrapper {
+    gap: 10px;
+  }
+
+  .fieldIcon {
+    font-size: 24px !important;
+    margin-top: 12px;
+  }
+
+  .submitButton {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+}

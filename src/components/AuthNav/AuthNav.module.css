@@ -1,0 +1,149 @@
+/* ============================================
+   AUTHNAV STYLES
+   ============================================ */
+
+/* AuthNav Container */
+.authNav {
+  display: flex;
+  gap: 12px; /* Butonlar arası boşluk */
+  align-items: center;
+}
+
+/* Link Container (NavLink wrapper) */
+.link {
+  text-decoration: none; /* Altı çizili link görünümünü kaldır */
+}
+
+/* Genel Auth Button Stilleri */
+.authButton {
+  font-weight: 600 !important;
+  text-transform: none !important; /* Büyük harf yapma */
+  padding: 8px 20px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  font-size: 15px !important;
+  letter-spacing: 0.5px;
+  min-width: 100px !important; /* Minimum genişlik (mobilde de düzgün görünsün) */
+}
+
+/* ============================================
+   LOGIN BUTTON (Outlined Variant)
+   ============================================ */
+.loginButton {
+  border: 2px solid #667eea !important;
+  color: #667eea !important;
+  background-color: transparent !important;
+}
+
+.loginButton:hover {
+  background-color: rgba(102, 126, 234, 0.1) !important;
+  border-color: #764ba2 !important;
+  color: #764ba2 !important;
+  transform: translateY(-2px); /* Yukarı kalk efekti */
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3) !important;
+}
+
+/* Login aktif state */
+.loginButton.active {
+  background-color: rgba(102, 126, 234, 0.15) !important;
+  border-color: #764ba2 !important;
+  color: #764ba2 !important;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* ============================================
+   REGISTER BUTTON (Contained Variant)
+   ============================================ */
+.registerButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4) !important;
+}
+
+.registerButton:hover {
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6) !important;
+  transform: translateY(-2px); /* Yukarı kalk efekti */
+  filter: brightness(1.1); /* Hafif parlaklık artışı */
+}
+
+/* Register aktif state */
+.registerButton.active {
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.7) !important;
+  filter: brightness(1.15); /* Daha parlak */
+}
+
+/* İkon Stilleri */
+.authButton svg {
+  font-size: 20px !important;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobil Uyumluluk
+   ============================================ */
+
+/* Tablet (768px ve altı) */
+@media (max-width: 768px) {
+  .authNav {
+    gap: 10px;
+  }
+
+  .authButton {
+    padding: 6px 16px !important;
+    font-size: 14px !important;
+    min-width: 90px !important;
+  }
+
+  .authButton svg {
+    font-size: 18px !important;
+  }
+}
+
+/* Mobil (480px ve altı) */
+@media (max-width: 480px) {
+  .authNav {
+    gap: 8px;
+  }
+
+  .authButton {
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+    min-width: 80px !important;
+  }
+
+  /* Çok dar ekranlarda buton yazılarını kısalt */
+  .authButton span:not(.MuiButton-startIcon) {
+    display: none; /* Yazıları gizle */
+  }
+
+  .authButton svg {
+    margin: 0 !important; /* İkonları ortala */
+    font-size: 20px !important;
+  }
+}
+
+/* ============================================
+   ANIMATION - Smooth Entrance
+   ============================================ */
+.authButton {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY - Focus States
+   ============================================ */
+.authButton:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}

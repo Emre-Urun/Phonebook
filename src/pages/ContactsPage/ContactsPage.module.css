@@ -1,0 +1,265 @@
+/* ============================================
+   CONTACTS PAGE STYLES
+   ============================================ */
+
+/* Ana Container */
+.contactsPage {
+  min-height: calc(100vh - 64px); /* AppBar yüksekliği hariç */
+  padding: 40px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ============================================
+   HEADER - Başlık Bölümü
+   ============================================ */
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+.headerIcon {
+  font-size: 72px !important;
+  color: white !important;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+.title {
+  font-weight: 800 !important;
+  color: white !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 18px !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   ERROR ALERT
+   ============================================ */
+.alert {
+  border-radius: 12px !important;
+  font-size: 15px !important;
+  animation: shake 0.5s ease-out;
+}
+
+/* ============================================
+   MAIN CONTENT - İki Sütunlu Layout
+   ============================================ */
+.mainContent {
+  display: grid;
+  grid-template-columns: 400px 1fr; /* Sol: 400px, Sağ: Kalan alan */
+  gap: 24px;
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+/* ============================================
+   SOL SÜTUN - Form Section
+   ============================================ */
+.formSection {
+  padding: 32px !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px);
+  height: fit-content; /* İçerik kadar yükseklik */
+  position: sticky; /* Scroll'da üstte sabit kal */
+  top: 88px; /* AppBar + biraz boşluk */
+}
+
+.sectionTitle {
+  font-weight: 700 !important;
+  color: #333 !important;
+  margin-bottom: 24px !important;
+  text-align: center;
+}
+
+/* ============================================
+   SAĞ SÜTUN - List Section
+   ============================================ */
+.listSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Search Section */
+.searchSection {
+  padding: 20px !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Contact List Section */
+.contactListSection {
+  padding: 24px !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px);
+  min-height: 400px; /* Minimum yükseklik */
+}
+
+/* ============================================
+   LOADING STATE
+   ============================================ */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 20px;
+}
+
+.loader {
+  color: #667eea !important;
+}
+
+.loadingText {
+  color: #666 !important;
+  font-size: 16px !important;
+  font-weight: 500;
+}
+
+/* ============================================
+   EMPTY STATE - Kişi Yok Mesajı
+   ============================================ */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  gap: 16px;
+}
+
+.emptyIcon {
+  font-size: 80px !important;
+  color: #ccc !important;
+  opacity: 0.5;
+}
+
+.emptyTitle {
+  font-weight: 600 !important;
+  color: #666 !important;
+}
+
+.emptyText {
+  color: #999 !important;
+  max-width: 300px;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobil Uyumluluk
+   ============================================ */
+
+/* Tablet (768px ve altı) - Tek Sütun */
+@media (max-width: 768px) {
+  .mainContent {
+    grid-template-columns: 1fr; /* Tek sütun */
+    gap: 20px;
+  }
+
+  .formSection {
+    position: static; /* Sticky'yi kaldır */
+  }
+
+  .headerIcon {
+    font-size: 56px !important;
+  }
+
+  .title {
+    font-size: 32px !important;
+  }
+
+  .subtitle {
+    font-size: 16px !important;
+  }
+}
+
+/* Mobil (480px ve altı) */
+@media (max-width: 480px) {
+  .contactsPage {
+    padding: 20px 0;
+  }
+
+  .container {
+    gap: 20px;
+  }
+
+  .formSection,
+  .searchSection,
+  .contactListSection {
+    padding: 20px !important;
+    border-radius: 12px !important;
+  }
+
+  .headerIcon {
+    font-size: 48px !important;
+  }
+
+  .title {
+    font-size: 28px !important;
+  }
+
+  .subtitle {
+    font-size: 15px !important;
+  }
+
+  .sectionTitle {
+    font-size: 20px !important;
+  }
+
+  .emptyIcon {
+    font-size: 64px !important;
+  }
+}

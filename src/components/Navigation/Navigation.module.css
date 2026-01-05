@@ -1,0 +1,117 @@
+/* ============================================
+   NAVIGATION STYLES
+   ============================================ */
+
+/* Nav Container */
+.nav {
+  display: flex;
+  gap: 16px; /* Butonlar arası boşluk */
+  align-items: center;
+  flex: 1; /* Kalan alanı kapla (AppBar'da ortalanmak için) */
+  justify-content: center; /* Ortala */
+}
+
+/* Link Container (NavLink wrapper) */
+.link {
+  text-decoration: none; /* Altı çizili link görünümünü kaldır */
+}
+
+/* Navigation Button */
+.navButton {
+  font-weight: 600 !important;
+  text-transform: none !important; /* Büyük harf yapma */
+  padding: 8px 20px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  font-size: 16px !important;
+  letter-spacing: 0.5px;
+}
+
+/* Pasif Buton (text variant) */
+.navButton[class*="MuiButton-text"] {
+  color: #555 !important;
+}
+
+.navButton[class*="MuiButton-text"]:hover {
+  background-color: rgba(102, 126, 234, 0.1) !important;
+  color: #667eea !important;
+}
+
+/* Aktif Buton (contained variant) */
+.navButton.active,
+.navButton[class*="MuiButton-contained"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4) !important;
+}
+
+.navButton.active:hover,
+.navButton[class*="MuiButton-contained"]:hover {
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6) !important;
+  transform: translateY(-2px); /* Yukarı kalk efekti */
+}
+
+/* İkon Stilleri */
+.navButton svg {
+  font-size: 20px !important;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobil Uyumluluk
+   ============================================ */
+
+/* Tablet (768px ve altı) */
+@media (max-width: 768px) {
+  .nav {
+    gap: 12px;
+  }
+
+  .navButton {
+    padding: 6px 16px !important;
+    font-size: 14px !important;
+  }
+
+  .navButton svg {
+    font-size: 18px !important;
+  }
+}
+
+/* Mobil (480px ve altı) */
+@media (max-width: 480px) {
+  .nav {
+    gap: 8px;
+    flex-wrap: wrap; /* Dar ekranda alt alta geçebilir */
+  }
+
+  .navButton {
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+  }
+
+  /* Çok dar ekranlarda yazıları gizle, sadece ikonları göster */
+  .navButton span:not(.MuiButton-startIcon) {
+    display: none;
+  }
+
+  .navButton svg {
+    margin: 0 !important;
+  }
+}
+
+/* ============================================
+   ANIMATION - Smooth Transitions
+   ============================================ */
+.navButton {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

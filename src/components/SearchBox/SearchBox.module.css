@@ -1,0 +1,112 @@
+/* ============================================
+   SEARCHBOX STYLES
+   ============================================ */
+
+/* Search Container */
+.searchContainer {
+  width: 100%;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ============================================
+   SEARCH FIELD - Material-UI TextField
+   ============================================ */
+.searchField {
+  background-color: white;
+}
+
+/* TextField focus durumu */
+.searchField
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #667eea !important;
+  border-width: 2px;
+}
+
+/* TextField label focus durumu (eğer label olsaydı) */
+.searchField .MuiInputLabel-root.Mui-focused {
+  color: #667eea !important;
+}
+
+/* Input text stilleri */
+.searchField .MuiOutlinedInput-input {
+  font-size: 15px;
+  padding: 14px 14px 14px 0; /* Sol padding 0 (SearchIcon için) */
+}
+
+/* Placeholder stilleri */
+.searchField .MuiOutlinedInput-input::placeholder {
+  color: #999;
+  opacity: 1;
+  font-style: italic;
+}
+
+/* ============================================
+   SEARCH ICON - Sol Taraf İkonu
+   ============================================ */
+.searchIcon {
+  color: #667eea !important;
+  font-size: 24px !important;
+}
+
+/* ============================================
+   CLEAR BUTTON - Temizle Butonu (X)
+   ============================================ */
+.clearButton {
+  color: #999 !important;
+  transition: all 0.2s ease !important;
+}
+
+.clearButton:hover {
+  color: #f44336 !important;
+  background-color: rgba(244, 67, 54, 0.1) !important;
+  transform: scale(1.1);
+}
+
+/* Clear Icon Animasyonu */
+.clearButton:hover svg {
+  animation: rotate 0.3s ease;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobil Uyumluluk
+   ============================================ */
+
+/* Mobil (480px ve altı) */
+@media (max-width: 480px) {
+  .searchField .MuiOutlinedInput-input {
+    font-size: 14px;
+    padding: 12px 12px 12px 0;
+  }
+
+  .searchIcon {
+    font-size: 22px !important;
+  }
+
+  .searchField .MuiOutlinedInput-input::placeholder {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,69 @@
+/* ============================================
+   LAYOUT STYLES
+   ============================================ */
+
+/* Ana Layout Container */
+.layout {
+  min-height: 100vh; /* Sayfa her zaman tam ekran yüksekliğinde */
+  display: flex;
+  flex-direction: column; /* Dikey düzen: AppBar → Main → Footer */
+  background: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 100%
+  ); /* Güzel gradient arka plan */
+}
+
+/* Main Content Area */
+.main {
+  flex: 1; /* Kalan tüm alanı kapla (AppBar ve Footer hariç) */
+  padding: 24px; /* İçerik kenarlardan uzak olsun */
+  max-width: 1200px; /* Çok geniş ekranlarda içerik çok genişlemesin */
+  width: 100%; /* Tam genişlik */
+  margin: 0 auto; /* Ortala */
+
+  /* İçeriğin yumuşak girmesi için animasyon */
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Fade In Animasyonu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobil Uyumluluk
+   ============================================ */
+
+/* Tablet (768px ve altı) */
+@media (max-width: 768px) {
+  .main {
+    padding: 16px; /* Mobilde daha az padding */
+  }
+}
+
+/* Mobil (480px ve altı) */
+@media (max-width: 480px) {
+  .main {
+    padding: 12px; /* Çok küçük ekranlarda minimum padding */
+  }
+}
+
+/* ============================================
+   FOOTER (Opsiyonel - şimdilik yorum satırı)
+   ============================================ */
+/* .footer {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  margin-top: auto;
+} */

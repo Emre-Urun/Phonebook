@@ -1,0 +1,206 @@
+/* ============================================
+   CONTACT CARD STYLES
+   ============================================ */
+
+/* Card Container */
+.card {
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+  background: white !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2) !important;
+}
+
+/* Card Content */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px !important;
+}
+
+/* ============================================
+   INFO SECTION - Sol Taraf (Kişi Bilgileri)
+   ============================================ */
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+/* Info Row (İsim veya Telefon satırı) */
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* İkonlar */
+.icon {
+  color: #667eea !important;
+  font-size: 22px !important;
+  flex-shrink: 0;
+}
+
+/* İsim */
+.name {
+  font-weight: 600 !important;
+  color: #333 !important;
+  font-size: 18px !important;
+  word-break: break-word; /* Uzun isimler satır atlasın */
+}
+
+/* ============================================
+   PHONE LINK - Telefon Numarası (Tıklanabilir)
+   ============================================ */
+.phoneLink {
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+  position: relative;
+}
+
+/* Telefon Numarası Metni */
+.number {
+  color: #666 !important;
+  font-size: 16px !important;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Phone Link Hover Efekti */
+.phoneLink:hover .number {
+  color: #667eea !important;
+  transform: translateX(4px);
+}
+
+/* Alt çizgi animasyonu */
+.phoneLink::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+}
+
+.phoneLink:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   ACTION SECTION - Sağ Taraf (Delete Butonu)
+   ============================================ */
+.actionSection {
+  display: flex;
+  align-items: center;
+}
+
+/* Delete Button */
+.deleteButton {
+  color: #f44336 !important;
+  transition: all 0.3s ease !important;
+}
+
+.deleteButton:hover:not(:disabled) {
+  background-color: rgba(244, 67, 54, 0.1) !important;
+  transform: scale(1.1);
+}
+
+.deleteButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Delete Icon Animasyonu (hover'da) */
+.deleteButton:hover:not(:disabled) svg {
+  animation: shake 0.5s ease;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobil Uyumluluk
+   ============================================ */
+
+/* Tablet (768px ve altı) */
+@media (max-width: 768px) {
+  .content {
+    padding: 16px !important;
+  }
+
+  .name {
+    font-size: 16px !important;
+  }
+
+  .number {
+    font-size: 15px !important;
+  }
+
+  .icon {
+    font-size: 20px !important;
+  }
+}
+
+/* Mobil (480px ve altı) */
+@media (max-width: 480px) {
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 14px !important;
+  }
+
+  .infoSection {
+    width: 100%;
+  }
+
+  .actionSection {
+    align-self: flex-end;
+  }
+
+  .name {
+    font-size: 15px !important;
+  }
+
+  .number {
+    font-size: 14px !important;
+  }
+
+  .icon {
+    font-size: 18px !important;
+  }
+}

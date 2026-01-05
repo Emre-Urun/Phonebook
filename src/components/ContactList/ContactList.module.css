@@ -1,0 +1,94 @@
+/* ============================================
+   CONTACT LIST STYLES
+   ============================================ */
+
+/* List Container */
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ============================================
+   CONTACT COUNT - Kişi Sayısı
+   ============================================ */
+.contactCount {
+  color: #666 !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  padding: 0 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   CONTACT LIST - Kişi Kartları Container
+   ============================================ */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ============================================
+   EMPTY STATE - Boş Liste Mesajı
+   ============================================ */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  gap: 12px;
+}
+
+.emptyTitle {
+  font-weight: 600 !important;
+  color: #666 !important;
+}
+
+.emptyText {
+  color: #999 !important;
+  max-width: 300px;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobil Uyumluluk
+   ============================================ */
+
+/* Mobil (480px ve altı) */
+@media (max-width: 480px) {
+  .list {
+    gap: 10px;
+  }
+
+  .contactCount {
+    font-size: 13px !important;
+  }
+
+  .emptyState {
+    padding: 40px 16px;
+  }
+
+  .emptyTitle {
+    font-size: 18px !important;
+  }
+
+  .emptyText {
+    font-size: 14px !important;
+  }
+}
